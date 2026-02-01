@@ -1,0 +1,145 @@
+// Light Theme Styles
+@import './quasar.variables.scss';
+
+// Typography
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: $page-bg;
+  min-height: 100vh;
+  color: $body-text;
+}
+
+// Card Styles
+.leaderboard-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $border-hover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Rank Badges
+.rank-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+
+  &.gold {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    color: #78350F;
+    box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+  }
+
+  &.silver {
+    background: linear-gradient(135deg, #E5E7EB, #D1D5DB);
+    color: #374151;
+    box-shadow: 0 2px 4px rgba(156, 163, 175, 0.3);
+  }
+
+  &.bronze {
+    background: linear-gradient(135deg, #D97706, #B45309);
+    color: #FEF3C7;
+    box-shadow: 0 2px 4px rgba(180, 83, 9, 0.3);
+  }
+
+  &.default {
+    background: $subtle-bg;
+    color: $secondary-text;
+    border: 1px solid $border;
+  }
+}
+
+// Self Highlight
+.self-highlight {
+  background: $highlight-bg !important;
+  border-left: 3px solid $primary;
+}
+
+// Stats
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $primary;
+}
+
+.stat-label {
+  color: $secondary-text;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+// Trends
+.trend-up {
+  color: $positive;
+}
+
+.trend-down {
+  color: $negative;
+}
+
+// Table Overrides for Light Theme
+.q-table {
+  background: $card-bg;
+  table-layout: fixed;
+
+  th {
+    color: $secondary-text;
+    font-weight: 600;
+    border-bottom: 2px solid $divider;
+  }
+
+  td {
+    color: $body-text;
+    border-bottom: 1px solid $divider;
+  }
+
+  tbody tr:hover {
+    background: $subtle-bg;
+  }
+}
+
+// Input Overrides
+.q-field--outlined .q-field__control {
+  border-color: $border;
+
+  &:hover {
+    border-color: $border-hover;
+  }
+}
+
+// Button Refinements
+.q-btn {
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+// Card Refinements
+.q-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+// Toolbar/Header
+.q-toolbar {
+  background: $card-bg;
+  border-bottom: 1px solid $divider;
+}
+
+// Subtle Background Sections
+.subtle-bg {
+  background: $subtle-bg;
+}
+
+// Highlight Background Sections
+.highlight-bg {
+  background: $highlight-bg;
+}
