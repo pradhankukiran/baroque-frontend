@@ -87,8 +87,8 @@ const columns = computed(() => [
 
 function getValueLabel(): string {
   switch (props.category) {
-    case 'power_user':
-      return 'Total Tokens';
+    case 'efficient_user':
+      return 'Efficiency';
     case 'cache_champion':
       return 'Cache Rate';
     case 'wordsmith':
@@ -108,7 +108,7 @@ function getRankClass(rank: number): string {
 }
 
 function formatValue(value: number): string {
-  if (props.category === 'cache_champion') {
+  if (props.category === 'cache_champion' || props.category === 'efficient_user') {
     return `${value.toFixed(1)}%`;
   }
   if (value >= 1000000) {

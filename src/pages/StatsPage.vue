@@ -242,7 +242,7 @@ function getRankClass(rank: number): string {
 
 function getCategoryLabel(category: string): string {
   const labels: Record<string, string> = {
-    power_user: 'Power User',
+    efficient_user: 'Efficient User',
     cache_champion: 'Cache Champion',
     wordsmith: 'Wordsmith',
     tool_master: 'Tool Master',

@@ -42,8 +42,9 @@
       <div class="row q-col-gutter-md q-mb-lg">
         <div class="col-12 col-md-6 col-lg-3">
           <category-card
-            title="Power User"
-            :entries="leaderboard?.categories?.power_user || []"
+            title="Efficient User"
+            :entries="leaderboard?.categories?.efficient_user || []"
+            suffix="%"
           />
         </div>
 
@@ -79,7 +80,7 @@
             indicator-color="primary"
             align="center"
           >
-            <q-tab name="power_user" label="Power User" />
+            <q-tab name="efficient_user" label="Efficient User" />
             <q-tab name="cache_champion" label="Cache Champion" />
             <q-tab name="wordsmith" label="Wordsmith" />
             <q-tab name="tool_master" label="Tool Master" />
@@ -136,7 +137,7 @@ const $q = useQuasar();
 const userStore = useUserStore();
 
 const period = ref('week');
-const selectedCategory = ref('power_user');
+const selectedCategory = ref('efficient_user');
 const selectedModel = ref<string | null>(null);
 const initialLoading = ref(true);
 const leaderboard = ref<LeaderboardData | null>(null);
